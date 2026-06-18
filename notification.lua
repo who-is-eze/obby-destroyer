@@ -55,3 +55,11 @@ closeButton.MouseButton1Click:Connect(function()
     notificationGui:Destroy()
     print("closing notification")
 end)
+
+
+local finalPosition = mainFrame.Position
+
+mainFrame.Position = finalPosition + UDim2.fromOffset(0, 100)
+
+local tween = TweenService:Create(mainFrame, TweenInfo.new(0.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {Position = finalPosition})
+tween:Play()
