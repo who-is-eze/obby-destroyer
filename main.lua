@@ -208,3 +208,27 @@ gameTag2.BorderSizePixel = 0
 gameTag2.Position = UDim2.new(0, 0, 0.0915584, 0)
 gameTag2.Size = UDim2.new(0, 150, 0, 35)
 gameTag2.Parent = secondFrame
+
+-- scripts
+
+local TeleportService = game:GetService("TeleportService")
+local Players = game:GetService("Players")
+local player = Players.LocalPlayer
+
+btnTakeMeThere1.MouseButton1Click:Connect(function()
+    local success, err = pcall(function()
+        TeleportService:Teleport(targetPlaceId, player)
+    end)
+    if not success then
+      Notification:Notify("error!", "teleporting failed! try again later")
+    end
+end)
+
+btnTakeMeThere2.MouseButton1Click:Connect(function()
+    local success, err = pcall(function()
+        TeleportService:Teleport(targetPlaceId, player)
+    end)
+    if not success then
+      Notification:Notify("error!", "teleporting failed! try again later")
+    end
+end)
