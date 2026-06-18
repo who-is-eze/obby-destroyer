@@ -1,12 +1,14 @@
 local HttpService = game:GetService("HttpService")
 local currentPlaceId = game.PlaceId
-local loadedScript = nil
 
 local success, apiResponse = pcall(function()
     return game:HttpGet("https://api.github.com/repos/who-is-eze/obby-destroyer/contents/gameList?ref=main")
 end)
 
-if not success then return end
+if not success then 
+    warn("prob github api down, failed to fetch")
+    return 
+end
 
 local folderContents = HttpService:JSONDecode(apiResponse)
 local matchFileName = nil
@@ -20,32 +22,36 @@ for _, file in ipairs(folderContents) do
     end
 end
 
-if matchFileName then
-    local scriptSuccess, scriptContent = pcall(function()
-        return game:HttpGet("https://raw.githubusercontent.com/who-is-eze/obby-destroyer/refs/heads/main/main.lua")
+local targetUrl = matchFileName 
+    and "https://raw.githubusercontent.com/who-is-eze/obby-destroyer/refs/heads/main/main.lua"
+    or "https://raw.githubusercontent.com/who-is-eze/obby-destroyer/refs/heads/main/universalTry.lua"
+
+local scriptSuccess, scriptContent = pcall(function()
+    return game:HttpGet(targetUrl)
+end)
+
+if scriptSuccess then
+    local execSuccess, execErr = pcall(function()
+        loadstring(scriptContent)()
     end)
-    
-    if scriptSuccess then
-        loadedScript = loadstring(scriptContent)
+    if not execSuccess then
+        warn("error on main script:", execErr)
     end
 else
-    local scriptSuccess, scriptContent = pcall(function()
-        return game:HttpGet("https://raw.githubusercontent.com/who-is-eze/obby-destroyer/refs/heads/main/universalTry.lua")
-    end)
-    
-    if scriptSuccess then
-        loadedScript = loadstring(scriptContent)
-    end
+    warn("failed to download")
 end
 
-if loadedScript then
-    local notificationSuccess, notificationContent = pcall(function()
-        return game:HttpGet("https://raw.githubusercontent.com/who-is-eze/obby-destroyer/refs/heads/main/notification.lua")
-    end)
-    
-    if notificationSuccess then
-        task.spawn(function()
+local notificationSuccess, notificationContent = pcall(function()
+    return game:HttpGet("https://raw.githubusercontent.com/who-is-eze/obby-destroyer/refs/heads/main/notification.lua")
+end)
+
+if notificationSuccess then
+    task.spawn(function()
+        local notiSuccess, notiErr = pcall(function()
             loadstring(notificationContent)()
         end)
-    end
+        if not notiSuccess then
+            warn("error loading notifications script:", notiErr)
+        end
+    end)
 end
