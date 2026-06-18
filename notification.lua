@@ -57,9 +57,8 @@ closeButton.MouseButton1Click:Connect(function()
 end)
 
 
+local TweenService = game:GetService("TweenService")
 local finalPosition = mainFrame.Position
 
-mainFrame.Position = finalPosition + UDim2.fromOffset(0, 100)
-
-local tween = TweenService:Create(mainFrame, TweenInfo.new(0.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {Position = finalPosition})
-tween:Play()
+mainFrame.Position = finalPosition + UDim2.new(0, 0, 0, 100)
+TweenService:Create(mainFrame, TweenInfo.new(0.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {Position = finalPosition}):Play()
