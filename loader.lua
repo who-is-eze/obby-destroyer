@@ -20,14 +20,32 @@ for _, file in ipairs(folderContents) do
     end
 end
 
-local targetUrl = matchFileName 
-    and "https://raw.githubusercontent.com/who-is-eze/obby-destroyer/refs/heads/main/gameList/" .. matchFileName
-    or "https://raw.githubusercontent.com/who-is-eze/obby-destroyer/refs/heads/main/universalTry.lua"
+if matchFileName then
+    local scriptSuccess, scriptContent = pcall(function()
+        return game:HttpGet("https://raw.githubusercontent.com/who-is-eze/obby-destroyer/refs/heads/main/main.lua")
+    end)
+    
+    if scriptSuccess then
+        loadedScript = loadstring(scriptContent)
+    end
+else
+    local scriptSuccess, scriptContent = pcall(function()
+        return game:HttpGet("https://raw.githubusercontent.com/who-is-eze/obby-destroyer/refs/heads/main/universalTry.lua")
+    end)
+    
+    if scriptSuccess then
+        loadedScript = loadstring(scriptContent)
+    end
+end
 
-local scriptSuccess, scriptContent = pcall(function()
-    return game:HttpGet(targetUrl)
-end)
-
-if scriptSuccess then
-    loadedScript = loadstring(scriptContent)
+if loadedScript then
+    local notificationSuccess, notificationContent = pcall(function()
+        return game:HttpGet("https://raw.githubusercontent.com/who-is-eze/obby-destroyer/refs/heads/main/notification.lua")
+    end)
+    
+    if notificationSuccess then
+        task.spawn(function()
+            loadstring(notificationContent)()
+        end)
+    end
 end
