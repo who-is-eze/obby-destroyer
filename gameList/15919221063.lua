@@ -26,12 +26,12 @@ for _, checkpointData in ipairs(checkpointsList) do
     local checkpoint = checkpointData.part
     if character and humanoidRootPart and humanoidRootPart.Parent then
         humanoidRootPart.CFrame = checkpoint.CFrame + Vector3.new(0, 3, 0)
-        print("Teletransportado al checkpoint: " .. checkpoint.Name)
     else
-        warn("El personaje no está disponible.")
+        warn("no character (???)")
         break
     end
--- change this wait to whatever you want, if the game has anticheat it will probably detect you
+-- change this wait to whatever you want
+-- if the game has an anticheat leave this alone
     task.wait(0.25)
 end
 print("nice")
