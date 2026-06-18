@@ -49,3 +49,9 @@ closeButton.BorderSizePixel = 0
 closeButton.Position = UDim2.new(0.9475, 0, -0.19, 0)
 closeButton.Size = UDim2.new(0, 40, 0, 40)
 closeButton.Parent = mainFrame
+
+-- close noti thing
+closeButton.MouseButton1Click:Connect(function()
+    notificationGui:Destroy()
+    print("closing notification")
+end)
