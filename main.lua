@@ -217,7 +217,7 @@ local player = Players.LocalPlayer
 
 btnTakeMeThere1.MouseButton1Click:Connect(function()
     local success, err = pcall(function()
-        TeleportService:Teleport(targetPlaceId, player)
+        TeleportService:Teleport(15919221063, player)
     end)
     if not success then
       Notification:Notify("error!", "teleporting failed! try again later")
@@ -226,7 +226,7 @@ end)
 
 btnTakeMeThere2.MouseButton1Click:Connect(function()
     local success, err = pcall(function()
-        TeleportService:Teleport(targetPlaceId, player)
+        TeleportService:Teleport(8003084678, player)
     end)
     if not success then
       Notification:Notify("error!", "teleporting failed! try again later")
