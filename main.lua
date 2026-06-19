@@ -241,7 +241,7 @@ configFrame.BorderSizePixel = 0
 configFrame.Position = UDim2.new(0.0433618836, 0, 0.272727281, 0)
 configFrame.Size = UDim2.new(0, 500, 0, 350)
 configFrame.Visible = false
-configFrame.Parent = game.StarterGui.obbyDestroyer3000script
+configFrame.Parent = obbyDestroyer3000script
 
 local title = Instance.new("TextLabel")
 title.Name = "title"
