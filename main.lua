@@ -12,7 +12,7 @@ local function imageExist(fileName, url)
         if success then
             writefile(fileName, content)
         else
-            warn("failed downloading resource '", fileName "')
+            warn("failed downloading resource ´", fileName "´")
         end
     end
 end
