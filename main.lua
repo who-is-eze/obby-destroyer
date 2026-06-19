@@ -224,6 +224,203 @@ gameTag2.Position = UDim2.new(0, 0, 0.0915584, 0)
 gameTag2.Size = UDim2.new(0, 150, 0, 35)
 gameTag2.Parent = secondFrame
 
+-- config thing
+
+local configFrame = Instance.new("Frame")
+configFrame.Name = "configFrame"
+configFrame.BackgroundColor3 = Color3.fromRGB(152, 162, 255)
+configFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+configFrame.BorderSizePixel = 0
+configFrame.Position = UDim2.new(0.0433618836, 0, 0.272727281, 0)
+configFrame.Size = UDim2.new(0, 500, 0, 350)
+configFrame.Visible = false
+configFrame.Parent = game.StarterGui.obbyDestroyer3000script
+
+local title = Instance.new("TextLabel")
+title.Name = "title"
+title.Font = Enum.Font.SourceSans
+title.Text = "configuration panel"
+title.TextColor3 = Color3.fromRGB(0, 0, 0)
+title.TextScaled = true
+title.TextSize = 14
+title.TextWrapped = true
+title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+title.BackgroundTransparency = 0.75
+title.BorderColor3 = Color3.fromRGB(0, 0, 0)
+title.BorderSizePixel = 0
+title.Size = UDim2.new(0, 500, 0, 50)
+title.Parent = configFrame
+
+local btnClose = Instance.new("TextButton")
+btnClose.Name = "btnClose"
+btnClose.Font = Enum.Font.SourceSans
+btnClose.Text = "X"
+btnClose.TextColor3 = Color3.fromRGB(0, 0, 0)
+btnClose.TextSize = 35
+btnClose.TextWrapped = true
+btnClose.BackgroundColor3 = Color3.fromRGB(255, 80, 67)
+btnClose.BorderColor3 = Color3.fromRGB(0, 0, 0)
+btnClose.BorderSizePixel = 0
+btnClose.Position = UDim2.new(0.959500015, 0, -0.0557142869, 0)
+btnClose.Size = UDim2.new(0, 40, 0, 40)
+btnClose.Parent = configFrame
+
+local buttonsFolder = Instance.new("Folder")
+buttonsFolder.Name = "Buttons"
+buttonsFolder.Parent = configFrame
+
+local btnConfig_1 = Instance.new("TextButton")
+btnConfig_1.Name = "btnConfig_1"
+btnConfig_1.Font = Enum.Font.SourceSans
+btnConfig_1.RichText = true
+btnConfig_1.Text = "placeholder text"
+btnConfig_1.TextColor3 = Color3.fromRGB(0, 0, 0)
+btnConfig_1.TextScaled = true
+btnConfig_1.TextSize = 14
+btnConfig_1.TextWrapped = true
+btnConfig_1.BackgroundColor3 = Color3.fromRGB(106, 220, 116)
+btnConfig_1.BorderColor3 = Color3.fromRGB(0, 0, 0)
+btnConfig_1.BorderSizePixel = 0
+btnConfig_1.Position = UDim2.new(0.0480000004, 0, 0.17428571, 0)
+btnConfig_1.Size = UDim2.new(0, 175, 0, 50)
+btnConfig_1.Parent = buttonsFolder
+
+local uiCorner = Instance.new("UICorner")
+uiCorner.CornerRadius = UDim.new(0, 3)
+uiCorner.Parent = btnConfig_1
+
+local btnConfig_2 = Instance.new("TextButton")
+btnConfig_2.Name = "btnConfig_2"
+btnConfig_2.Font = Enum.Font.SourceSans
+btnConfig_2.RichText = true
+btnConfig_2.Text = "placeholder text"
+btnConfig_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+btnConfig_2.TextScaled = true
+btnConfig_2.TextSize = 14
+btnConfig_2.TextWrapped = true
+btnConfig_2.BackgroundColor3 = Color3.fromRGB(106, 220, 116)
+btnConfig_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+btnConfig_2.BorderSizePixel = 0
+btnConfig_2.Position = UDim2.new(0.0480000004, 0, 0.39142856, 0)
+btnConfig_2.Size = UDim2.new(0, 175, 0, 50)
+btnConfig_2.Parent = buttonsFolder
+
+local uiCorner1 = Instance.new("UICorner")
+uiCorner1.CornerRadius = UDim.new(0, 3)
+uiCorner1.Parent = btnConfig_2
+
+local btnConfig_3 = Instance.new("TextButton")
+btnConfig_3.Name = "btnConfig_3"
+btnConfig_3.Font = Enum.Font.SourceSans
+btnConfig_3.RichText = true
+btnConfig_3.Text = "placeholder text"
+btnConfig_3.TextColor3 = Color3.fromRGB(0, 0, 0)
+btnConfig_3.TextScaled = true
+btnConfig_3.TextSize = 14
+btnConfig_3.TextWrapped = true
+btnConfig_3.BackgroundColor3 = Color3.fromRGB(106, 220, 116)
+btnConfig_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+btnConfig_3.BorderSizePixel = 0
+btnConfig_3.Position = UDim2.new(0.0480000004, 0, 0.622857153, 0)
+btnConfig_3.Size = UDim2.new(0, 175, 0, 50)
+btnConfig_3.Parent = buttonsFolder
+
+local uiCorner2 = Instance.new("UICorner")
+uiCorner2.CornerRadius = UDim.new(0, 3)
+uiCorner2.Parent = btnConfig_3
+
+local btnConfig_4 = Instance.new("TextButton")
+btnConfig_4.Name = "btnConfig_4"
+btnConfig_4.Font = Enum.Font.SourceSans
+btnConfig_4.RichText = true
+btnConfig_4.Text = "placeholder text"
+btnConfig_4.TextColor3 = Color3.fromRGB(0, 0, 0)
+btnConfig_4.TextScaled = true
+btnConfig_4.TextSize = 14
+btnConfig_4.TextWrapped = true
+btnConfig_4.BackgroundColor3 = Color3.fromRGB(106, 220, 116)
+btnConfig_4.BorderColor3 = Color3.fromRGB(0, 0, 0)
+btnConfig_4.BorderSizePixel = 0
+btnConfig_4.Position = UDim2.new(0.0480000004, 0, 0.82571429, 0)
+btnConfig_4.Size = UDim2.new(0, 175, 0, 50)
+btnConfig_4.Parent = buttonsFolder
+
+local uiCorner3 = Instance.new("UICorner")
+uiCorner3.CornerRadius = UDim.new(0, 3)
+uiCorner3.Parent = btnConfig_4
+
+local statusFolder = Instance.new("Folder")
+statusFolder.Name = "Status"
+statusFolder.Parent = configFrame
+
+local configStatus_4 = Instance.new("TextLabel")
+configStatus_4.Name = "configStatus_4"
+configStatus_4.Font = Enum.Font.SourceSans
+configStatus_4.Text = ""
+configStatus_4.TextColor3 = Color3.fromRGB(0, 0, 0)
+configStatus_4.TextSize = 14
+configStatus_4.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+configStatus_4.BorderColor3 = Color3.fromRGB(0, 0, 0)
+configStatus_4.BorderSizePixel = 0
+configStatus_4.Position = UDim2.new(0.474387079, 0, 0.860129893, 0)
+configStatus_4.Size = UDim2.new(0, 25, 0, 25)
+configStatus_4.Parent = statusFolder
+
+local uiCorner4 = Instance.new("UICorner")
+uiCorner4.CornerRadius = UDim.new(1, 0)
+uiCorner4.Parent = configStatus_4
+
+local configStatus_3 = Instance.new("TextLabel")
+configStatus_3.Name = "configStatus_3"
+configStatus_3.Font = Enum.Font.SourceSans
+configStatus_3.Text = ""
+configStatus_3.TextColor3 = Color3.fromRGB(0, 0, 0)
+configStatus_3.TextSize = 14
+configStatus_3.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+configStatus_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+configStatus_3.BorderSizePixel = 0
+configStatus_3.Position = UDim2.new(0.474387079, 0, 0.660129905, 0)
+configStatus_3.Size = UDim2.new(0, 25, 0, 25)
+configStatus_3.Parent = statusFolder
+
+local uiCorner5 = Instance.new("UICorner")
+uiCorner5.CornerRadius = UDim.new(1, 0)
+uiCorner5.Parent = configStatus_3
+
+local configStatus_2 = Instance.new("TextLabel")
+configStatus_2.Name = "configStatus_2"
+configStatus_2.Font = Enum.Font.SourceSans
+configStatus_2.Text = ""
+configStatus_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+configStatus_2.TextSize = 14
+configStatus_2.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+configStatus_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+configStatus_2.BorderSizePixel = 0
+configStatus_2.Position = UDim2.new(0.474387079, 0, 0.425844193, 0)
+configStatus_2.Size = UDim2.new(0, 25, 0, 25)
+configStatus_2.Parent = statusFolder
+
+local uiCorner6 = Instance.new("UICorner")
+uiCorner6.CornerRadius = UDim.new(1, 0)
+uiCorner6.Parent = configStatus_2
+
+local configStatus_1 = Instance.new("TextLabel")
+configStatus_1.Name = "configStatus_1"
+configStatus_1.Font = Enum.Font.SourceSans
+configStatus_1.Text = ""
+configStatus_1.TextColor3 = Color3.fromRGB(0, 0, 0)
+configStatus_1.TextSize = 14
+configStatus_1.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+configStatus_1.BorderColor3 = Color3.fromRGB(0, 0, 0)
+configStatus_1.BorderSizePixel = 0
+configStatus_1.Position = UDim2.new(0.474387079, 0, 0.208701342, 0)
+configStatus_1.Size = UDim2.new(0, 25, 0, 25)
+configStatus_1.Parent = statusFolder
+
+local uiCorner7 = Instance.new("UICorner")
+uiCorner7.CornerRadius = UDim.new(1, 0)
+uiCorner7.Parent = configStatus_1
+
 -- services
 
 local UserInputService = game:GetService("UserInputService")
@@ -311,7 +508,8 @@ local function makeDraggable(frame)
 end
 
 makeDraggable(mainFrame)
-makeDraggable(secondFrame)    
+makeDraggable(secondFrame) 
+makeDraggable(configFrame)
 
 -- script loader
 
@@ -334,4 +532,10 @@ btnUnlockAll.MouseButton1Click:Connect(function()
             getgenv().Notification:Notify("not supported", "this game is not supported")
         end
     end
+end)
+
+-- config scripts
+
+btnClose.MouseButton1Click:Connect(function()
+	configFrame.Visible = false
 end)
