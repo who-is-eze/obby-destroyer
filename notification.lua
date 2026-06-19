@@ -63,5 +63,5 @@ function Notification:Notify(title, message)
     mainFrame.Position = finalPosition + UDim2.new(0, 0, 0, 100)
     TweenService:Create(mainFrame, TweenInfo.new(0.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {Position = finalPosition}):Play()
 end
-
+getgenv().Notification = Notification
 return Notification
