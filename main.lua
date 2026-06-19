@@ -209,11 +209,14 @@ gameTag2.Position = UDim2.new(0, 0, 0.0915584, 0)
 gameTag2.Size = UDim2.new(0, 150, 0, 35)
 gameTag2.Parent = secondFrame
 
--- teleport scripts
+-- services
 
+local UserInputService = game:GetService("UserInputService")
 local TeleportService = game:GetService("TeleportService")
 local Players = game:GetService("Players")
 local player = Players.LocalPlayer
+
+-- teleport scripts
 
 btnTakeMeThere1.MouseButton1Click:Connect(function()
     local success, err = pcall(function()
