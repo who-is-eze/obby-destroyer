@@ -312,3 +312,26 @@ end
 
 makeDraggable(mainFrame)
 makeDraggable(secondFrame)    
+
+-- script loader
+
+btnUnlockAll.MouseButton1Click:Connect(function()
+    if getgenv().ExecuteGameScript then
+        if getgenv().Notification then
+            getgenv().Notification:Notify("executing", "running script...")
+        end
+        local success, err = pcall(function()
+            getgenv().ExecuteGameScript()
+        end)
+        if not success then
+            warn("error running script:", err)
+            if getgenv().Notification then
+                getgenv().Notification:Notify("error!", "the script failed")
+            end
+        end
+    else
+        if getgenv().Notification then
+            getgenv().Notification:Notify("not supported", "this game is not supported")
+        end
+    end
+end)
