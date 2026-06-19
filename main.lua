@@ -1,9 +1,25 @@
 -- resources
 local fileName_settings = "handmade_settingthing.png"
-game:HttpGet("https://raw.githubusercontent.com/who-is-eze/obby-destroyer/main/resources/handmade_settingthing.png")
+local url_settings"https://raw.githubusercontent.com/who-is-eze/obby-destroyer/main/resources/handmade_settingthing.png"
 local fileName_info = "handmade_infothing.png"
-game:HttpGet("https://raw.githubusercontent.com/who-is-eze/obby-destroyer/main/resources/handmade_infothing.png")
+local url_info = "https://raw.githubusercontent.com/who-is-eze/obby-destroyer/main/resources/handmade_infothing.png"
 
+local function imageExist(fileName, url)
+    if not isfile(fileName) then
+        local success, content = pcall(function()
+            return game:HttpGet(url)
+        end)
+        if success then
+            writefile(fileName, content)
+        else
+            warn("failed downloading resource '", fileName "')
+        end
+    end
+end
+	
+imageExists(fileName_settings, url_settings)
+imageExists(fileName_settings, url_settings)
+	
 -- main gui
 
 local obbyDestroyer3000script = Instance.new("ScreenGui")
@@ -428,8 +444,11 @@ local uiCorner7 = Instance.new("UICorner")
 uiCorner7.CornerRadius = UDim.new(1, 0)
 uiCorner7.Parent = configStatus_1
 
-
 local btnSettings = Instance.new("ImageButton");
+local successSettings, assetSettings = pcall(function() return getcustomasset(fileName_settings) end)
+if successSettings then
+    btnSettings.Image = assetSettings
+end
 btnSettings.Image = getcustomasset(fileName_settings)
 btnSettings.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 btnSettings.BackgroundTransparency = 1
@@ -441,6 +460,10 @@ btnSettings.Name = "btnSettings"
 btnSettings.Parent = mainFrame
 
 local btnInfo = Instance.new("ImageButton");
+local successInfo, assetInfo = pcall(function() return getcustomasset(fileName_info) end)
+if successInfo then
+    btnInfo.Image = assetInfo
+end
 btnInfo.Image = getcustomasset(fileName_info)
 btnInfo.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 btnInfo.BackgroundTransparency = 1
