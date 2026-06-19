@@ -238,7 +238,11 @@ btnTakeMeThere1.MouseButton1Click:Connect(function()
         TeleportService:Teleport(15919221063, player)
     end)
     if not success then
-      Notification:Notify("error!", "teleporting failed! try again later")
+        if getgenv().Notification then
+            getgenv().Notification:Notify("error!", "teleporting failed! try again later")
+        else
+            warn("tp and notifications failed")
+        end
     end
 end)
 
@@ -247,10 +251,13 @@ btnTakeMeThere2.MouseButton1Click:Connect(function()
         TeleportService:Teleport(8003084678, player)
     end)
     if not success then
-      Notification:Notify("error!", "teleporting failed! try again later")
+        if getgenv().Notification then
+            getgenv().Notification:Notify("error!", "teleporting failed! try again later")
+        else
+            warn("tp and notifications failed")
+        end
     end
 end)
-
 -- drag thing for the guis
 
 local function makeDraggable(frame)
