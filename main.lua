@@ -165,6 +165,21 @@ local uiCorner4 = Instance.new("UICorner")
 uiCorner4.CornerRadius = UDim.new(0, 3)
 uiCorner4.Parent = btnTakeMeThere2
 
+local nothingtoseehere = Instance.new("TextLabel")
+nothingtoseehere.Font = Enum.Font.SourceSansItalic
+nothingtoseehere.Text = "nothing to see here..."
+nothingtoseehere.TextColor3 = Color3.fromRGB(0, 0, 0)
+nothingtoseehere.TextSize = 14
+nothingtoseehere.TextWrapped = true
+nothingtoseehere.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+nothingtoseehere.BackgroundTransparency = 1
+nothingtoseehere.BorderColor3 = Color3.fromRGB(0, 0, 0,)
+nothingtoseehere.BorderSizePixel = 0
+nothingtoseehere.Position = UDim2.new(0, 0, 0.985000014, 0)
+nothingtoseehere.Size = UDim2.new(0, 150, 0, 25)
+nothingtoseehere.Name = "nothingtoseehere"
+nothingtoseehere.Parent = secondFrame
+
 local gameTag1 = Instance.new("TextLabel")
 gameTag1.Name = "gameTag1"
 gameTag1.Font = Enum.Font.SourceSans
