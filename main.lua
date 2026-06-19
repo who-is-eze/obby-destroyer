@@ -1,4 +1,11 @@
--- just the gui
+-- resources
+local fileName_settings = "handmade_settingthing.png"
+game:HttpGet("https://raw.githubusercontent.com/who-is-eze/obby-destroyer/main/resources/handmade_settingthing.png")
+local fileName_info = "handmade_infothing.png"
+game:HttpGet("https://raw.githubusercontent.com/who-is-eze/obby-destroyer/main/resources/handmade_infothing.png")
+
+-- main gui
+
 local obbyDestroyer3000script = Instance.new("ScreenGui")
 obbyDestroyer3000script.Name = "obbyDestroyer3000script"
 obbyDestroyer3000script.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
@@ -420,6 +427,29 @@ configStatus_1.Parent = statusFolder
 local uiCorner7 = Instance.new("UICorner")
 uiCorner7.CornerRadius = UDim.new(1, 0)
 uiCorner7.Parent = configStatus_1
+
+
+local btnSettings = Instance.new("ImageButton");
+btnSettings.Image = getcustomasset(fileName_settings)
+btnSettings.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+btnSettings.BackgroundTransparency = 1
+btnSettings.BorderColor3 = Color3.fromRGB(0, 0, 0)
+btnSettings.BorderSizePixel = 0
+btnSettings.Position = UDim2.new(0.878000021, 0, 0.82571429, 0)
+btnSettings.Size = UDim2.new(0, 50, 0, 50)
+btnSettings.Name = "btnSettings"
+btnSettings.Parent = mainFrame
+
+local btnInfo = Instance.new("ImageButton");
+btnInfo.Image = getcustomasset(fileName_info)
+btnInfo.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+btnInfo.BackgroundTransparency = 1
+btnInfo.BorderColor3 = Color3.fromRGB(0, 0, 0)
+btnInfo.BorderSizePixel = 0
+btnInfo.Position = UDim2.new(0.878000021, 0, 0.82571429, 0)
+btnInfo.Size = UDim2.new(0, 50, 0, 50)
+btnInfo.Name = "btnInfo"
+btnInfo.Parent = mainFrame
 
 -- services
 
