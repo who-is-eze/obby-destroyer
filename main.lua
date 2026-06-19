@@ -1,6 +1,6 @@
 -- resources
 local fileName_settings = "handmade_settingthing.png"
-local url_settings"https://raw.githubusercontent.com/who-is-eze/obby-destroyer/main/resources/handmade_settingthing.png"
+local url_settings = "https://raw.githubusercontent.com/who-is-eze/obby-destroyer/main/resources/handmade_settingthing.png"
 local fileName_info = "handmade_infothing.png"
 local url_info = "https://raw.githubusercontent.com/who-is-eze/obby-destroyer/main/resources/handmade_infothing.png"
 
