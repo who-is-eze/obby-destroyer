@@ -258,19 +258,19 @@ title.BorderSizePixel = 0
 title.Size = UDim2.new(0, 500, 0, 50)
 title.Parent = configFrame
 
-local btnClose = Instance.new("TextButton")
-btnClose.Name = "btnClose"
-btnClose.Font = Enum.Font.SourceSans
-btnClose.Text = "X"
-btnClose.TextColor3 = Color3.fromRGB(0, 0, 0)
-btnClose.TextSize = 35
-btnClose.TextWrapped = true
-btnClose.BackgroundColor3 = Color3.fromRGB(255, 80, 67)
-btnClose.BorderColor3 = Color3.fromRGB(0, 0, 0)
-btnClose.BorderSizePixel = 0
-btnClose.Position = UDim2.new(0.959500015, 0, -0.0557142869, 0)
-btnClose.Size = UDim2.new(0, 40, 0, 40)
-btnClose.Parent = configFrame
+local btnCloseConfig = Instance.new("TextButton")
+btnCloseConfig.Name = "btnClose"
+btnCloseConfig.Font = Enum.Font.SourceSans
+btnCloseConfig.Text = "X"
+btnCloseConfig.TextColor3 = Color3.fromRGB(0, 0, 0)
+btnCloseConfig.TextSize = 35
+btnCloseConfig.TextWrapped = true
+btnCloseConfig.BackgroundColor3 = Color3.fromRGB(255, 80, 67)
+btnCloseConfig.BorderColor3 = Color3.fromRGB(0, 0, 0)
+btnCloseConfig.BorderSizePixel = 0
+btnCloseConfig.Position = UDim2.new(0.959500015, 0, -0.0557142869, 0)
+btnCloseConfig.Size = UDim2.new(0, 40, 0, 40)
+btnCloseConfig.Parent = configFrame
 
 local buttonsFolder = Instance.new("Folder")
 buttonsFolder.Name = "Buttons"
@@ -566,6 +566,6 @@ end)
 
 -- config scripts
 
-btnClose.MouseButton1Click:Connect(function()
+btnCloseConfig.MouseButton1Click:Connect(function()
 	configFrame.Visible = false
 end)
