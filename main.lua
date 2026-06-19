@@ -4,7 +4,7 @@ local url_settings = "https://raw.githubusercontent.com/who-is-eze/obby-destroye
 local fileName_info = "handmade_infothing.png"
 local url_info = "https://raw.githubusercontent.com/who-is-eze/obby-destroyer/main/resources/handmade_infothing.png"
 
-local function imageExist(fileName, url)
+local function imageExists(fileName, url)
     if not isfile(fileName) then
         local success, content = pcall(function()
             return game:HttpGet(url)
@@ -12,13 +12,14 @@ local function imageExist(fileName, url)
         if success then
             writefile(fileName, content)
         else
-            warn("failed downloading resource ´", fileName "´")
+            -- Added the missing comma after fileName
+            warn("failed downloading resource ´", fileName, "´")
         end
     end
 end
 	
 imageExists(fileName_settings, url_settings)
-imageExists(fileName_settings, url_settings)
+imageExists(fileName_info, url_info)
 	
 -- main gui
 
