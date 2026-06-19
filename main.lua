@@ -450,7 +450,6 @@ local successSettings, assetSettings = pcall(function() return getcustomasset(fi
 if successSettings then
     btnSettings.Image = assetSettings
 end
-btnSettings.Image = getcustomasset(fileName_settings)
 btnSettings.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 btnSettings.BackgroundTransparency = 1
 btnSettings.BorderColor3 = Color3.fromRGB(0, 0, 0)
@@ -465,12 +464,11 @@ local successInfo, assetInfo = pcall(function() return getcustomasset(fileName_i
 if successInfo then
     btnInfo.Image = assetInfo
 end
-btnInfo.Image = getcustomasset(fileName_info)
 btnInfo.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 btnInfo.BackgroundTransparency = 1
 btnInfo.BorderColor3 = Color3.fromRGB(0, 0, 0)
 btnInfo.BorderSizePixel = 0
-btnInfo.Position = UDim2.new(0.878000021, 0, 0.82571429, 0)
+btnInfo.Position = UDim2.new(0.0240000002, 0, 0.82571429, 0)
 btnInfo.Size = UDim2.new(0, 50, 0, 50)
 btnInfo.Name = "btnInfo"
 btnInfo.Parent = mainFrame
