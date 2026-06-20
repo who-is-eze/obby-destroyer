@@ -219,7 +219,7 @@ btnTakeMeThere3.BorderSizePixel = 0
 btnTakeMeThere3.Position = UDim2.new(0.0516129024, 0, 0.177532479, 0)
 btnTakeMeThere3.Size = UDim2.new(0, 100, 0, 50)
 btnTakeMeThere3.ZIndex = -4
-btnTakeMeThere3.Parent = btnTakeMeThere3
+btnTakeMeThere3.Parent = takemethereFolder
 
 local uiCorner = Instance.new("UICorner")
 uiCorner.CornerRadius = UDim.new(0, 3)
