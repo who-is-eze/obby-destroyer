@@ -115,3 +115,5 @@ for _, stageData in ipairs(stagesList) do
 -- if the game has an anticheat leave this alone
     task.wait(0.25)
 end
+
+stopButton.MouseButton1Click:Connect(stopScript)
