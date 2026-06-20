@@ -17,7 +17,7 @@ toggleFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
 toggleFrame.BorderSizePixel = 0
 toggleFrame.Position = UDim2.new(0.428815663, 0, 0.748051941, 0)
 toggleFrame.Size = UDim2.new(0, 225, 0, 75)
-toggleFrame.Parent = game.StarterGui.obbyDestroyer3000script
+toggleFrame.Parent = obbyDestroyer3000script
 
 local title = Instance.new("TextLabel")
 title.Name = "title"
