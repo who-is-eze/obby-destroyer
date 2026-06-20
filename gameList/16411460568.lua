@@ -114,7 +114,7 @@ for _, checkpointData in ipairs(checkpointsList) do
     end
 -- change this wait to whatever you want
 -- if the game has an anticheat leave this alone
-    task.wait(0.25)
+    task.wait(0.15)
 end
 print("nice")
 
