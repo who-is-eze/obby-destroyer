@@ -576,7 +576,6 @@ btnTakeMeThere3.MouseButton1Click:Connect(function()
 			Notification:Notify("error!", "teleporting failed! try again later")
 		end
 	end)
-end
 
 -- drag thing for the guis
 
