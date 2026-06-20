@@ -149,6 +149,22 @@ local uiCorner2 = Instance.new("UICorner")
 uiCorner2.CornerRadius = UDim.new(1, 0)
 uiCorner2.Parent = statusGame2
 
+local statusGame3 = Instance.new("TextLabel")
+statusGame3.Name = "statusGame3"
+statusGame3.Font = Enum.Font.SourceSans
+statusGame3.Text = ""
+statusGame3.TextColor3 = Color3.fromRGB(0, 0, 0)
+statusGame3.TextSize = 14
+statusGame3.BackgroundColor3 = Color3.fromRGB(78, 255, 0)
+statusGame3.BorderSizePixel = 0
+statusGame3.Position = UDim2.new(0.767741919, 0, 0.185064942, 0)
+statusGame3.Size = UDim2.new(0, 25, 0, 25)
+statusGame3.Parent = statusFolder
+
+local uiCorner3 = Instance.new("UICorner")
+uiCorner3.CornerRadius = UDim.new(1, 0)
+uiCorner3.Parent = statusGame3
+
 local takemethereFolder = Instance.new("Folder")
 takemethereFolder.Name = "takemethereButtons"
 takemethereFolder.Parent = secondFrame
@@ -188,6 +204,26 @@ btnTakeMeThere2.Parent = takemethereFolder
 local uiCorner4 = Instance.new("UICorner")
 uiCorner4.CornerRadius = UDim.new(0, 3)
 uiCorner4.Parent = btnTakeMeThere2
+
+local btnTakeMeThere3 = Instance.new("TextButton")
+btnTakeMeThere3.Name = "btnTakeMeThere3"
+btnTakeMeThere3.Font = Enum.Font.SourceSans
+btnTakeMeThere3.Text = "take me there"
+btnTakeMeThere3.TextColor3 = Color3.fromRGB(0, 0, 0)
+btnTakeMeThere3.TextScaled = true
+btnTakeMeThere3.TextSize = 14
+btnTakeMeThere3.TextWrapped = true
+btnTakeMeThere3.BackgroundColor3 = Color3.fromRGB(106, 220, 116)
+btnTakeMeThere3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+btnTakeMeThere3.BorderSizePixel = 0
+btnTakeMeThere3.Position = UDim2.new(0.0516129024, 0, 0.177532479, 0)
+btnTakeMeThere3.Size = UDim2.new(0, 100, 0, 50)
+btnTakeMeThere3.ZIndex = -4
+btnTakeMeThere3.Parent = btnTakeMeThere3
+
+local uiCorner = Instance.new("UICorner")
+uiCorner.CornerRadius = UDim.new(0, 3)
+uiCorner.Parent = btnTakeMeThere3
 
 local nothingtoseehere = Instance.new("TextLabel")
 nothingtoseehere.Font = Enum.Font.SourceSansItalic
@@ -247,6 +283,21 @@ gameTag2.BorderSizePixel = 0
 gameTag2.Position = UDim2.new(0, 0, 0.0915584, 0)
 gameTag2.Size = UDim2.new(0, 150, 0, 35)
 gameTag2.Parent = secondFrame
+
+local gameTag3 = Instance.new("TextLabel")
+gameTag3.Name = "gameTag3"
+gameTag3.Font = Enum.Font.SourceSans
+gameTag3.Text = "[NEW] Golden's Difficulty Chart Obby"
+gameTag3.TextColor3 = Color3.fromRGB(0, 0, 0)
+gameTag3.TextScaled = true
+gameTag3.TextSize = 14
+gameTag3.TextWrapped = true
+gameTag3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+gameTag3.BackgroundTransparency = 1
+gameTag3.BorderSizePixel = 0
+gameTag3.Position = UDim2.new(0, 0, 0.150649354, 0)
+gameTag3.Size = UDim2.new(0, 150, 0, 35)
+gameTag3.Parent = secondFrame
 
 -- config thing
 
@@ -516,6 +567,16 @@ btnTakeMeThere2.MouseButton1Click:Connect(function()
         end
     end
 end)
+
+btnTakeMeThere3.MouseButton1Click:Connect(function()
+	local success, err = pcall(function()
+		TeleportService:Teleport(108750539382245, player)
+	end)	
+	if not success then
+			Notification:Notify("error!", "teleporting failed! try again later")
+		end
+	end)
+end
 
 -- drag thing for the guis
 
